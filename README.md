@@ -20,8 +20,11 @@ The **camera app is proprietary**; the **protocol is open**. Anyone can build a
 receiver — open-source or commercial — that speaks it. The Apache-2.0 license
 imposes no copyleft: use it in a closed product, sell it, whatever you need.
 
-Existing receivers that speak this protocol: **Airlive Bridge** (Mac multicam
-switcher) and the **Airlive for OBS** plugin.
+Existing receivers that speak this protocol:
+[**Airlive Bridge**](https://github.com/airlive-project/airlive-bridge) (Mac
+multicam switcher) and the
+[**Airlive for OBS**](https://github.com/airlive-project/airlive-for-obs) plugin —
+both open-source working references.
 
 ## At a glance
 
@@ -177,7 +180,7 @@ socket.send(ControlMessage.setISO(400).encodeAsPacket().encode())
 
 `AirliveCore` depends only on **Foundation** and **CryptoKit** (Apple platforms).
 On a non-Apple platform, implement the framing from the spec above — it is
-deliberately trivial (a 18-byte big-endian header + JSON) so a receiver in C,
+deliberately trivial (an 18-byte big-endian header + JSON) so a receiver in C,
 Python, Rust or JS is a small amount of code.
 
 ## Building a non-Apple receiver — checklist
